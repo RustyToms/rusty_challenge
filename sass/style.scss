@@ -1,1 +1,86 @@
-@import 'reset'
+@import 'reset';
+
+$font: Helvetica Neue, Arial, sans-serif;
+$header-color: rgb(107, 171, 236);
+$searchbar-color: rgb(77, 133, 192);
+$nav-link-color: rgb(201, 226, 248);
+
+body {
+  font-family: $font;
+}
+
+/* ----- General ----- */
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ----- Header ----- */
+
+header {
+  background-color: $header-color;
+  color: $nav-link-color;
+  height: 46px;
+}
+.header-left {
+  float: left;
+
+  li {
+    float: left;
+  }
+}
+.header-right {
+  float: right;
+
+  li {
+    float: right;
+  }
+}
+.header-center {
+  width: 100px;
+  margin: auto;
+  text-align: center;
+}
+.searchbar {
+  background-color: $searchbar-color;
+}
+
+/* ----- Icons ----- */
+
+.icon {
+  background-image: url("../img/twitter_icons_small.png");
+  display: inline-block;
+  width: 24px;
+  height: 22px;
+}
+.bird-white {
+  background-position: -96px 0px;
+}
+.home {
+  background-position: 0px 0px;
+}
+.connect {
+  background-position: -24px 0px;
+}
+.discover {
+  background-position: -48px 0px;
+}
+.me {
+  background-position: -72px 0px;
+}
+.compose {
+  background-position: -121px 0px;
+}
+.settings {
+  background-position: -147px 0px;
+}
+.mail {
+  background-position: -172px 0px;
+}
+.search {
+  background-position: -206px -3px;
+  height: 14px;
+  width: 14px;
+}

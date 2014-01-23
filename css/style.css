@@ -44,3 +44,72 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+body {
+  font-family: Helvetica Neue, Arial, sans-serif; }
+
+/* ----- General ----- */
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: table; }
+
+/* ----- Header ----- */
+header {
+  background-color: #6babec;
+  color: #c9e2f8;
+  height: 46px; }
+
+.header-left {
+  float: left; }
+  .header-left li {
+    float: left; }
+
+.header-right {
+  float: right; }
+  .header-right li {
+    float: right; }
+
+.header-center {
+  width: 100px;
+  margin: auto;
+  text-align: center; }
+
+.searchbar {
+  background-color: #4d85c0; }
+
+/* ----- Icons ----- */
+.icon {
+  background-image: url("../img/twitter_icons_small.png");
+  display: inline-block;
+  width: 24px;
+  height: 22px; }
+
+.bird-white {
+  background-position: -96px 0px; }
+
+.home {
+  background-position: 0px 0px; }
+
+.connect {
+  background-position: -24px 0px; }
+
+.discover {
+  background-position: -48px 0px; }
+
+.me {
+  background-position: -72px 0px; }
+
+.compose {
+  background-position: -121px 0px; }
+
+.settings {
+  background-position: -147px 0px; }
+
+.mail {
+  background-position: -172px 0px; }
+
+.search {
+  background-position: -206px -3px;
+  height: 14px;
+  width: 14px; }
