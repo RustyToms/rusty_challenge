@@ -53,7 +53,7 @@ main {
   width: 893px;
   margin: auto; }
 
-/* ----- General ----- */
+/* ---------- General ---------- */
 .clearfix:after {
   content: "";
   clear: both;
@@ -72,10 +72,50 @@ main {
 
 .box {
   margin: 14px 0;
-  border: 1px solid #e4e4e4;
-  border-radius: 4px; }
+  border: 1px solid #e1e1e1;
+  border-radius: 6px; }
 
-/* ----- Header ----- */
+/* ---------- Icons ---------- */
+.icon {
+  background-image: url("../img/twitter_icons_small.png");
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer; }
+
+.bird-white {
+  background-position: -96px -1px;
+  vertical-align: middle; }
+
+.home {
+  background-position: 0px 0px; }
+
+.connect {
+  background-position: -24px 0px; }
+
+.discover {
+  background-position: -48px 0px; }
+
+.me {
+  background-position: -72px 0px; }
+
+.compose {
+  background-position: -121px 0px; }
+
+.settings {
+  margin-left: 6px;
+  background-position: -147px 1px; }
+
+.mail {
+  background-position: -172px 1px;
+  margin-left: 3px; }
+
+.search {
+  background-position: -206px 0px;
+  height: 17px;
+  width: 14px; }
+
+/* ---------- Header ---------- */
 header {
   background-color: #6babec;
   color: #c9e2f8;
@@ -144,7 +184,7 @@ header {
     color: white;
     padding-top: 2px; }
 
-/* ----- Sidebar ----- */
+/* ---------- Sidebar ---------- */
 .sidebar {
   float: left;
   width: 290px;
@@ -156,64 +196,52 @@ header {
 .background-pic {
   width: 100%;
   height: 144px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px; }
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px; }
 
 .profile-pic {
   position: absolute;
-  top: 10px;
+  top: 11px;
   left: 91px;
-  width: 107px;
-  height: 116px; }
+  width: 108px;
+  height: 117px; }
 
 .counts {
   width: 100%; }
   .counts td {
-    border-left: 1px solid #e4e4e4;
-    border-bottom: 1px solid #e4e4e4; }
+    border-left: 1px solid #e1e1e1;
+    padding: 10px;
+    width: 103px; }
   .counts td:last-child {
-    border-right: 1px solid #e4e4e4; }
+    border-right: 1px solid #e1e1e1;
+    width: 82px; }
+  .counts h4 {
+    color: #9caab4;
+    font-size: 9px;
+    font-weight: 200;
+    letter-spacing: 0.5px; }
 
+.count {
+  font-size: 13px;
+  color: #68757f; }
+
+.box-bottom {
+  border: 1px solid #e1e1e1;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px; }
+
+.compose-tweet {
+  margin: 10px 12px;
+  width: 246px;
+  height: 20px;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  padding: 5px 8px; }
+
+/* ---------- Tweets ----------*/
 .tweets {
   float: right;
   width: 589px; }
-
-/* ----- Icons ----- */
-.icon {
-  background-image: url("../img/twitter_icons_small.png");
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  cursor: pointer; }
-
-.bird-white {
-  background-position: -96px -1px;
-  vertical-align: middle; }
-
-.home {
-  background-position: 0px 0px; }
-
-.connect {
-  background-position: -24px 0px; }
-
-.discover {
-  background-position: -48px 0px; }
-
-.me {
-  background-position: -72px 0px; }
-
-.compose {
-  background-position: -121px 0px; }
-
-.settings {
-  margin-left: 6px;
-  background-position: -147px 1px; }
-
-.mail {
-  background-position: -172px 1px;
-  margin-left: 3px; }
-
-.search {
-  background-position: -206px 0px;
-  height: 17px;
-  width: 14px; }

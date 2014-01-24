@@ -3,10 +3,14 @@
 $font: Helvetica Neue, Arial, sans-serif;
 $header-color: rgb(107, 171, 236);
 $header-height: 46px;
-$searchbar-color: rgb(77, 133, 192);
 $nav-link-color: rgb(201, 226, 248);
-$radius: 4px;
-$border: 1px solid rgb(228, 228, 228);
+$radius: 6px;
+$sidebar-width: 290px;
+$border: 1px solid rgb(225, 225, 225);
+$medium-grey: rgb(156, 170, 180); //h4, conversation-line, username
+$dark-grey: rgb(104, 117, 127); //count, big-title
+$light-grey: rgb(153, 153, 153); //links, retweeter
+$dark-blue: rgb(77, 133, 192); // searchbar, trends-list, target-name, additional-replies
 
 body {
   font-family: $font;
@@ -17,7 +21,7 @@ main {
   margin: auto;
 }
 
-/* ----- General ----- */
+/* ---------- General ---------- */
 
 .clearfix:after {
   content: "";
@@ -41,7 +45,49 @@ main {
   border-radius: $radius;
 }
 
-/* ----- Header ----- */
+/* ---------- Icons ---------- */
+
+.icon {
+  background-image: url("../img/twitter_icons_small.png");
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.bird-white {
+  background-position: -96px -1px;
+  vertical-align: middle;
+}
+.home {
+  background-position: 0px 0px;
+}
+.connect {
+  background-position: -24px 0px;
+}
+.discover {
+  background-position: -48px 0px;
+}
+.me {
+  background-position: -72px 0px;
+}
+.compose {
+  background-position: -121px 0px;
+}
+.settings {
+  margin-left: 6px;
+  background-position: -147px 1px;
+}
+.mail {
+  background-position: -172px 1px;
+  margin-left: 3px;
+}
+.search {
+  background-position: -206px 0px;
+  height: 17px;
+  width: 14px;
+}
+
+/* ---------- Header ---------- */
 
 header {
   background-color: $header-color;
@@ -93,7 +139,7 @@ header {
 .searchbar {
   position: relative;
   top: -5px;
-  background-color: $searchbar-color;
+  background-color: $dark-blue;
   padding: 5px;
   width: 211px;
   height: 22px;
@@ -128,11 +174,13 @@ header {
   }
 }
 
-/* ----- Sidebar ----- */
+/* ---------- Sidebar ---------- */
+
+// account box
 
 .sidebar {
   float: left;
-  width: 290px;
+  width: $sidebar-width;
   margin-top: 14px;
 }
 .account {
@@ -147,64 +195,57 @@ header {
 }
 .profile-pic {
   position: absolute;
-  top: 10px;
+  top: 11px;
   left: 91px;
-  width: 107px;
-  height: 116px;
+  width: 108px;
+  height: 117px;
 }
 .counts {
   width: 100%;
   td {
     border-left: $border;
-    border-bottom: $border;
+    padding: 10px;
+    width: 103px;
   }
   td:last-child {
     border-right: $border;
+    width: 82px;
+  }
+  h4 {
+    color: $medium-grey;
+    font-size: 9px;
+    font-weight: 200;
+    letter-spacing: 0.5px;
   }
 }
+.count {
+  font-size: 13px;
+  color: $dark-grey;
+}
+.box-bottom {
+  border: $border;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+.compose-tweet {
+  margin: 10px 12px;
+  width: $sidebar-width - 44px;
+  height: 20px;
+  border: $border;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 200;
+  letter-spacing: 0.5px;
+  padding: 5px 8px;
+}
+
+// trends box
+
+/* ---------- Tweets ----------*/
+
 .tweets {
   float: right;
   width: 589px;
 }
 
-/* ----- Icons ----- */
 
-.icon {
-  background-image: url("../img/twitter_icons_small.png");
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  cursor: pointer;
-}
-.bird-white {
-  background-position: -96px -1px;
-  vertical-align: middle;
-}
-.home {
-  background-position: 0px 0px;
-}
-.connect {
-  background-position: -24px 0px;
-}
-.discover {
-  background-position: -48px 0px;
-}
-.me {
-  background-position: -72px 0px;
-}
-.compose {
-  background-position: -121px 0px;
-}
-.settings {
-  margin-left: 6px;
-  background-position: -147px 1px;
-}
-.mail {
-  background-position: -172px 1px;
-  margin-left: 3px;
-}
-.search {
-  background-position: -206px 0px;
-  height: 17px;
-  width: 14px;
-}
