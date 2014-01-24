@@ -9,7 +9,7 @@ $sidebar-width: 290px;
 $border: 1px solid rgb(225, 225, 225);
 $medium-grey: rgb(156, 170, 180); //h4, conversation-line, username
 $dark-grey: rgb(104, 117, 127); //count, big-title
-$light-grey: rgb(153, 153, 153); //links, retweeter
+$light-grey: rgba(153, 153, 153, 0.75); //links, retweeter
 $dark-blue: rgb(128, 167, 210); // trends-list, target-name, additional-replies
 
 
@@ -291,6 +291,21 @@ header {
     position: relative;
     top: 2px;
     margin-right: 1px;
+  }
+}
+
+// links box
+
+.links {
+  padding: 14px 10px 17px 15px;
+
+  a {
+    display: inline-block;
+    color: $light-grey;
+    font-size: 12px;
+    font-weight: 200;
+    margin: 0 4px 2px 0;
+    letter-spacing: 0.3px;
   }
 }
 

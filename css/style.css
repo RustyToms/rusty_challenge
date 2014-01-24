@@ -280,6 +280,16 @@ header {
     top: 2px;
     margin-right: 1px; }
 
+.links {
+  padding: 14px 10px 17px 15px; }
+  .links a {
+    display: inline-block;
+    color: rgba(153, 153, 153, 0.75);
+    font-size: 12px;
+    font-weight: 200;
+    margin: 0 4px 2px 0;
+    letter-spacing: 0.3px; }
+
 /* ---------- Tweets ----------*/
 .tweets {
   float: right;
