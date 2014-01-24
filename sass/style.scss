@@ -10,7 +10,8 @@ $border: 1px solid rgb(225, 225, 225);
 $medium-grey: rgb(156, 170, 180); //h4, conversation-line, username
 $dark-grey: rgb(104, 117, 127); //count, big-title
 $light-grey: rgb(153, 153, 153); //links, retweeter
-$dark-blue: rgb(77, 133, 192); // searchbar, trends-list, target-name, additional-replies
+$dark-blue: rgb(128, 167, 210); // trends-list, target-name, additional-replies
+
 
 body {
   font-family: $font;
@@ -20,6 +21,9 @@ main {
   width: 893px;
   margin: auto;
 }
+a {
+  cursor: pointer;
+}
 
 /* ---------- General ---------- */
 
@@ -28,21 +32,24 @@ main {
   clear: both;
   display: table;
 }
-.overlay {
-  opacity: 0.5;
-  display: none;
-  position: absolute;
-  z-index: 3;
-  background-image: url("../img/twitter_small.png");
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  left: 0px;
-}
 .box {
   margin: 14px 0;
   border: $border;
   border-radius: $radius;
+}
+.big-title {
+  color: $dark-grey;
+  font-size: 19px;
+  font-weight: 200;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  -moz-padding-end: 15px;
+}
+.big-title::first-letter {
+  letter-spacing: -2px;
+}
+.dot {
+  padding: 0 1px 0 2px;
 }
 
 /* ---------- Icons ---------- */
@@ -85,6 +92,11 @@ main {
   background-position: -206px 0px;
   height: 17px;
   width: 14px;
+}
+.promoted {
+  background-position: -372px 0px;
+  height: 12px;
+  width: 15px;
 }
 
 /* ---------- Header ---------- */
@@ -139,7 +151,7 @@ header {
 .searchbar {
   position: relative;
   top: -5px;
-  background-color: $dark-blue;
+  background-color: rgb(77, 133, 192);
   padding: 5px;
   width: 211px;
   height: 22px;
@@ -204,7 +216,7 @@ header {
   width: 100%;
   td {
     border-left: $border;
-    padding: 10px;
+    padding: 10px 10px 8px 10px;
     width: 103px;
   }
   td:last-child {
@@ -215,11 +227,12 @@ header {
     color: $medium-grey;
     font-size: 9px;
     font-weight: 200;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
   }
 }
 .count {
-  font-size: 13px;
+  font-size: 14px;
   color: $dark-grey;
 }
 .box-bottom {
@@ -230,16 +243,56 @@ header {
 .compose-tweet {
   margin: 10px 12px;
   width: $sidebar-width - 44px;
-  height: 20px;
+  height: 30px;
   border: $border;
   border-radius: 3px;
   font-size: 12px;
   font-weight: 200;
   letter-spacing: 0.5px;
-  padding: 5px 8px;
+  padding: 0px 8px;
+}
+.box-bottom{
+  ::-webkit-input-placeholder {
+    padding-top: 1px;
+    letter-spacing: 0.75px;
+  }
+  ::-moz-placeholder {
+    padding-top: 1px;
+  }
+  :-ms-input-placeholder {
+    padding-top: 1px;
+  }
 }
 
 // trends box
+
+.trends {
+  padding: 18px 15px 11px 15px;
+  font-size: 12px;
+
+  .trends-title {
+    margin-bottom: 9px;
+  }
+  .dot {
+    display: inline-block;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: $dark-blue;
+    font-weight: 200;
+    letter-spacing: 0.25px;
+    margin-right: 5px;
+  }
+  .promoted {
+    position: relative;
+    top: 2px;
+    margin-right: 1px;
+  }
+}
 
 /* ---------- Tweets ----------*/
 
@@ -248,4 +301,15 @@ header {
   width: 589px;
 }
 
+.overlay {
+  opacity: 0.5;
+  // display: none;
+  position: absolute;
+  z-index: 3;
+  background-image: url("../img/twitter_small.png");
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+}
 
