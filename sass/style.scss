@@ -216,8 +216,11 @@ header {
   width: 100%;
   td {
     border-left: $border;
-    padding: 10px 10px 8px 10px;
-    width: 103px;
+    padding: 10px 10px 9px 10px;
+    width: 91px;
+  }
+  td:first-child {
+    width: 115px;
   }
   td:last-child {
     border-right: $border;
@@ -228,7 +231,7 @@ header {
     font-size: 9px;
     font-weight: 200;
     letter-spacing: 1px;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
   }
 }
 .count {
@@ -275,6 +278,7 @@ header {
   }
   .dot {
     display: inline-block;
+    font-weight: 200;
   }
 
   li {
@@ -286,6 +290,9 @@ header {
     font-weight: 200;
     letter-spacing: 0.25px;
     margin-right: 5px;
+  }
+  a:hover {
+    text-decoration: underline;
   }
   .promoted {
     position: relative;
@@ -307,6 +314,9 @@ header {
     margin: 0 4px 2px 0;
     letter-spacing: 0.3px;
   }
+  a:hover {
+    color: $dark-grey;
+  }
 }
 
 /* ---------- Tweets ----------*/
@@ -318,7 +328,7 @@ header {
 
 .overlay {
   opacity: 0.5;
-  // display: none;
+  display: none;
   position: absolute;
   z-index: 3;
   background-image: url("../img/twitter_small.png");

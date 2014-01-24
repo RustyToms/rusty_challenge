@@ -221,8 +221,10 @@ header {
   width: 100%; }
   .counts td {
     border-left: 1px solid #e1e1e1;
-    padding: 10px 10px 8px 10px;
-    width: 103px; }
+    padding: 10px 10px 9px 10px;
+    width: 91px; }
+  .counts td:first-child {
+    width: 115px; }
   .counts td:last-child {
     border-right: 1px solid #e1e1e1;
     width: 82px; }
@@ -231,7 +233,7 @@ header {
     font-size: 9px;
     font-weight: 200;
     letter-spacing: 1px;
-    margin-bottom: 2px; }
+    margin-bottom: 1px; }
 
 .count {
   font-size: 14px;
@@ -267,7 +269,8 @@ header {
   .trends .trends-title {
     margin-bottom: 9px; }
   .trends .dot {
-    display: inline-block; }
+    display: inline-block;
+    font-weight: 200; }
   .trends li {
     margin-bottom: 8px; }
   .trends a {
@@ -275,6 +278,8 @@ header {
     font-weight: 200;
     letter-spacing: 0.25px;
     margin-right: 5px; }
+  .trends a:hover {
+    text-decoration: underline; }
   .trends .promoted {
     position: relative;
     top: 2px;
@@ -289,6 +294,8 @@ header {
     font-weight: 200;
     margin: 0 4px 2px 0;
     letter-spacing: 0.3px; }
+  .links a:hover {
+    color: #68757f; }
 
 /* ---------- Tweets ----------*/
 .tweets {
@@ -297,6 +304,7 @@ header {
 
 .overlay {
   opacity: 0.5;
+  display: none;
   position: absolute;
   z-index: 3;
   background-image: url("../img/twitter_small.png");
