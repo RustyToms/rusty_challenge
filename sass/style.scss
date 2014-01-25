@@ -107,7 +107,7 @@ img {
   height: 12px;
   width: 15px;
 }
-.forward {
+.retweet {
   background-position: -268px 0px;
   height: 12px;
   width: 17px;
@@ -121,6 +121,11 @@ img {
   background-position: -346px 0px;
   height: 12px;
   width: 15px;
+}
+.retweet-green {
+  background-position: -397px 0px;
+  height: 12px;
+  width: 17px;
 }
 
 /* ---------- Header ---------- */
@@ -367,6 +372,9 @@ header {
   padding: 12px;
   border-bottom: $border;
 }
+
+// tweet
+
 .tweet {
   position: relative;
   font-size: 14px;
@@ -444,6 +452,9 @@ header {
 .tweet:last-child .tweet-nav-bar {
   padding-bottom: 1px;
 }
+
+// hidden replies
+
 .hidden-replies {
   margin-top: -3px;
   padding-bottom: 10px;
@@ -474,10 +485,31 @@ header {
   vertical-align: top;
 }
 
+// retweet
+
+.rt-notification {
+  position: relative;
+  width: 100%;
+  margin: 2px 0 6px 0;
+
+  .icon {
+    position: absolute;
+    left: 34px;
+  }
+  p {
+    margin-left: $tweet-offset;
+    vertical-align: top;
+    color: $light-grey;
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 0.25px;
+  }
+}
+
 
 .overlay {
   opacity: 0.5;
-  display: none;
+  // display: none;
   position: absolute;
   z-index: 3;
   background-image: url("../img/twitter_small.png");

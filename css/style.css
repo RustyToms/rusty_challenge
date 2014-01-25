@@ -134,7 +134,7 @@ img {
   height: 12px;
   width: 15px; }
 
-.forward {
+.retweet {
   background-position: -268px 0px;
   height: 12px;
   width: 17px; }
@@ -148,6 +148,11 @@ img {
   background-position: -346px 0px;
   height: 12px;
   width: 15px; }
+
+.retweet-green {
+  background-position: -397px 0px;
+  height: 12px;
+  width: 17px; }
 
 /* ---------- Header ---------- */
 header {
@@ -436,9 +441,23 @@ header {
   letter-spacing: 0.65px;
   vertical-align: top; }
 
+.rt-notification {
+  position: relative;
+  width: 100%;
+  margin: 2px 0 6px 0; }
+  .rt-notification .icon {
+    position: absolute;
+    left: 34px; }
+  .rt-notification p {
+    margin-left: 58px;
+    vertical-align: top;
+    color: rgba(153, 153, 153, 0.75);
+    font-size: 12px;
+    font-weight: 200;
+    letter-spacing: 0.25px; }
+
 .overlay {
   opacity: 0.5;
-  display: none;
   position: absolute;
   z-index: 3;
   background-image: url("../img/twitter_small.png");
