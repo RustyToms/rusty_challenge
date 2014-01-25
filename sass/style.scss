@@ -6,23 +6,27 @@ $header-height: 46px;
 $nav-link-color: rgb(201, 226, 248);
 $radius: 6px;
 $sidebar-width: 290px;
+$tweet-offset: 58px;
 $border: 1px solid rgb(225, 225, 225);
 $medium-grey: rgb(156, 170, 180); //h4, conversation-line, username
 $dark-grey: rgb(104, 117, 127); //count, big-title
 $light-grey: rgba(153, 153, 153, 0.75); //links, retweeter
-$dark-blue: rgb(128, 167, 210); // trends-list, target-name, additional-replies
-
+$dark-blue: rgb(77, 133, 192); // trends-list, target-name, additional-replies
+// $dark-blue: rgb(128, 167, 210);
 
 body {
   font-family: $font;
   min-width: 900px;
 }
 main {
-  width: 893px;
+  width: 894px;
   margin: auto;
 }
 a {
   cursor: pointer;
+}
+img {
+  vertical-align: top;
 }
 
 /* ---------- General ---------- */
@@ -98,6 +102,26 @@ a {
   height: 12px;
   width: 15px;
 }
+.reply {
+  background-position: -231px 0px;
+  height: 12px;
+  width: 15px;
+}
+.forward {
+  background-position: -268px 0px;
+  height: 12px;
+  width: 17px;
+}
+.favorite {
+  background-position: -310px 0px;
+  height: 12px;
+  width: 15px;
+}
+.more {
+  background-position: -346px 0px;
+  height: 12px;
+  width: 15px;
+}
 
 /* ---------- Header ---------- */
 
@@ -151,7 +175,7 @@ header {
 .searchbar {
   position: relative;
   top: -5px;
-  background-color: rgb(77, 133, 192);
+  background-color: $dark-blue;
   padding: 5px;
   width: 211px;
   height: 22px;
@@ -199,7 +223,8 @@ header {
   position: relative;
 }
 .background-pic {
-  width: 100%;
+  border: $border;
+  width: $sidebar-width - 2px;
   height: 144px;
   border-top-left-radius: $radius;
   border-top-right-radius: $radius;
@@ -304,27 +329,151 @@ header {
 // links box
 
 .links {
-  padding: 14px 10px 17px 15px;
+  padding: 18px 10px 12px 15px;
+  color: $light-grey;
+  font-size: 12px;
+  font-weight: 200;
 
   a {
     display: inline-block;
-    color: $light-grey;
-    font-size: 12px;
-    font-weight: 200;
+    margin: 0 6px 6px 0;
+    letter-spacing: 0.2px;
+  }
+  span {
     margin: 0 4px 2px 0;
-    letter-spacing: 0.3px;
   }
   a:hover {
-    color: $dark-grey;
+    text-decoration: underline;
   }
+}
+.links:hover a{
+  color: $dark-grey;
 }
 
 /* ---------- Tweets ----------*/
 
 .tweets {
   float: right;
-  width: 589px;
+  width: 588px;
+  .big-title {
+    font-size: 21px;
+  }
 }
+.tweets-title {
+  padding: 13px 13px 12px 12px;
+  border-bottom: $border;
+}
+.conversation {
+  padding: 12px;
+  border-bottom: $border;
+}
+.tweet {
+  position: relative;
+  font-size: 14px;
+}
+.visuals {
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+
+  img {
+    width: 48px;
+    height: 48px;
+    border-radius: 5px;
+  }
+}
+.convo-line {
+  position:absolute;
+
+  left: 23px;
+  width: 3px;
+  background-color: $medium-grey;
+  border-radius: 2px;
+}
+.convo-line-solid {
+  @extend .convo-line;
+  top: 50px;
+  bottom: 2px;
+}
+.content {
+  margin-left: $tweet-offset;
+}
+.tweet:last-child .convo-line-solid{
+  display: none;
+}
+.tweet-header {
+  margin-bottom: 1px;
+}
+.author {
+  vertical-align: top;
+  font-weight: bold;
+}
+.username {
+  font-size: 13px;
+  color: $medium-grey;
+  font-weight: 200;
+  letter-spacing: 0.33px;
+  vertical-align: top;
+}
+.how-long-ago {
+  @extend .username;
+  float: right;
+  font-weight: 100;
+  font-size: 12px;
+  color: rgb(205, 214, 221);
+}
+.tweet-content {
+  letter-spacing: 0.22px;
+  line-height: 18.5px;
+  font-weight: 200;
+
+  a {
+    font-size: 13px;
+    color: $dark-blue;
+    font-weight: 200;
+    letter-spacing: 0.80px;
+  }
+}
+.tweet-nav-bar {
+  padding: 10px 0 17px;
+
+  .icon {
+    margin-right: 19px;
+  }
+}
+.tweet:last-child .tweet-nav-bar {
+  padding-bottom: 1px;
+}
+.hidden-replies {
+  margin-top: -3px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.convo-line-dot {
+  @extend .convo-line;
+  height: 3px;
+  top: 4px;
+}
+.convo-line-dot:first-child {
+  top: 0px;
+}
+.convo-line-dot:last-child {
+  top: 8px;
+}
+.convo-line-end {
+  @extend .convo-line;
+  top: 13px;
+  bottom: 2px;
+}
+.reply-count {
+  margin-left: $tweet-offset;
+  font-size: 13px;
+  color: $dark-blue;
+  font-weight: 200;
+  letter-spacing: 0.65px;
+  vertical-align: top;
+}
+
 
 .overlay {
   opacity: 0.5;
