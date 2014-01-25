@@ -54,7 +54,8 @@ main {
   margin: auto; }
 
 a {
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: none; }
 
 img {
   vertical-align: top; }
@@ -357,7 +358,8 @@ header {
   .visuals img {
     width: 48px;
     height: 48px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    cursor: pointer; }
 
 .convo-line, .convo-line-solid, .convo-line-dot, .convo-line-end {
   position: absolute;
@@ -380,8 +382,13 @@ header {
   margin-bottom: 1px; }
 
 .author {
+  cursor: pointer;
   vertical-align: top;
   font-weight: bold; }
+
+.author:hover {
+  text-decoration: underline;
+  color: #4d85c0; }
 
 .username, .how-long-ago {
   font-size: 13px;
@@ -405,6 +412,15 @@ header {
     color: #4d85c0;
     font-weight: 200;
     letter-spacing: 0.80px; }
+  .tweet-content a:hover {
+    text-decoration: underline; }
+  .tweet-content img {
+    display: block;
+    max-width: 506px;
+    max-height: 506px;
+    border-radius: 5px;
+    margin: 13px 0;
+    cursor: pointer; }
 
 .tweet-nav-bar {
   padding: 10px 0 17px; }
@@ -447,7 +463,8 @@ header {
   margin: 2px 0 6px 0; }
   .rt-notification .icon {
     position: absolute;
-    left: 34px; }
+    left: 34px;
+    cursor: default; }
   .rt-notification p {
     margin-left: 58px;
     vertical-align: top;
@@ -458,6 +475,7 @@ header {
 
 .overlay {
   opacity: 0.5;
+  display: none;
   position: absolute;
   z-index: 3;
   background-image: url("../img/twitter_small.png");

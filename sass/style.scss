@@ -24,6 +24,7 @@ main {
 }
 a {
   cursor: pointer;
+  text-decoration: none;
 }
 img {
   vertical-align: top;
@@ -388,6 +389,7 @@ header {
     width: 48px;
     height: 48px;
     border-radius: 5px;
+    cursor: pointer;
   }
 }
 .convo-line {
@@ -413,8 +415,13 @@ header {
   margin-bottom: 1px;
 }
 .author {
+  cursor: pointer;
   vertical-align: top;
   font-weight: bold;
+}
+.author:hover {
+  text-decoration: underline;
+  color: $dark-blue;
 }
 .username {
   font-size: 13px;
@@ -440,6 +447,17 @@ header {
     color: $dark-blue;
     font-weight: 200;
     letter-spacing: 0.80px;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  img {
+    display: block;
+    max-width: 506px;
+    max-height: 506px;
+    border-radius: 5px;
+    margin: 13px 0;
+    cursor: pointer;
   }
 }
 .tweet-nav-bar {
@@ -495,6 +513,7 @@ header {
   .icon {
     position: absolute;
     left: 34px;
+    cursor: default;
   }
   p {
     margin-left: $tweet-offset;
@@ -509,7 +528,7 @@ header {
 
 .overlay {
   opacity: 0.5;
-  // display: none;
+  display: none;
   position: absolute;
   z-index: 3;
   background-image: url("../img/twitter_small.png");
