@@ -12,160 +12,175 @@
 </head>
 
 <body>
-  <header>
+  <script type='text/x-handlebars' data-template-name='twitter/index'>
+    <h1 id='invitation'>Please search for a username</h1>
+  </script>
 
-    <ul class='header-left'>
-      <li class='h-l-link'>
-        <span class='icon home'></span>
+  <script type='text/x-handlebars' data-template-name='account'>
 
-        <span class='link-name'>Home</span>
-      </li>
+    <main>
+      <section class='sidebar'>
+        <div class='account'>
+          <img src='img/not-kitteh.png' class='background-pic' />
 
-      <li class='h-l-link'>
-        <span class='icon connect'></span>
+          <img src='img/kitteh.png' class='profile-pic' />
 
-        <span class='link-name'>Connect</span>
-      </li>
+          <table class='counts'>
+            <tr>
+              <td class='tweet-count'>
+                <h4>TWEETS</h4>
 
-      <li class='h-l-link'>
-        <span class='icon discover'></span>
+                <span class='count'></span>
+              </td>
 
-        <span class='link-name'>Discover</span>
-      </li>
+              <td class='following-count'>
+                <h4>FOLLOWING</h4>
 
-      <li class='h-l-link'>
-        <span class='icon me'></span>
+                <span class='count'></span>
+              </td>
 
-        <span class='link-name'>Me</span>
-      </li>
-    </ul>
+              <td class='followers-count'>
+                <h4>FOLLOWERS</h4>
 
+                <span class='count'></span>
+              </td>
+            </tr>
+          </table>
 
-    <ul class='header-right'>
-      <li class='h-r-link'>
-        <span class='icon compose'></span>
-      </li>
-
-      <li class='h-r-link'>
-        <span class='icon settings'></span>
-      </li>
-
-      <li class='h-r-link'>
-        <span class='icon mail'></span>
-      </li>
-
-      <li class='searchbar'>
-        <input type='text' placeholder='Search' />
-
-        <span class='icon search'></span>
-      </li>
-    </ul>
-
-
-    <div class='header-center'>
-      <span class='icon bird-white'></span>
-    </div>
-
-  </header>
-
-
-
-  <main>
-    <section class='sidebar'>
-      <div class='account'>
-<!--         <img src='http://placekitten.com/289/144' class='background-pic' />
-
-        <img src='http://placekitten.com/108/117' class='profile-pic' /> -->
-        <img src='img/not-kitteh.png' class='background-pic' />
-
-        <img src='img/kitteh.png' class='profile-pic' />
-
-        <table class='counts'>
-          <tr>
-            <td class='tweet-count'>
-              <h4>TWEETS</h4>
-
-              <span class='count'></span>
-            </td>
-
-            <td class='following-count'>
-              <h4>FOLLOWING</h4>
-
-              <span class='count'></span>
-            </td>
-
-            <td class='followers-count'>
-              <h4>FOLLOWERS</h4>
-
-              <span class='count'></span>
-            </td>
-          </tr>
-        </table>
-
-        <div class='box-bottom'>
-          <input
-            type='text'
-            class='compose-tweet'
-            placeholder='Compose new Tweet...'
-          />
-        </div>
-      </div>
-
-
-      <div class='trends box'>
-        <div class='trends-title'>
-          <div class='big-title'>Trends</div>
-
-          <div class='dot'>&#183;</div>
-
-          <a>Change</a>
+          <div class='box-bottom'>
+            <input
+              type='text'
+              class='compose-tweet'
+              placeholder='Compose new Tweet...'
+            />
+          </div>
         </div>
 
-        <ul class='trends-list'>
 
-        </ul>
+        <div class='trends box'>
+          <div class='trends-title'>
+            <div class='big-title'>Trends</div>
+
+            <div class='dot'>&#183;</div>
+
+            <a>Change</a>
+          </div>
+
+          <ul class='trends-list'>
+
+          </ul>
+        </div>
+
+
+        <div class='links box'>
+          <span>&#169; 2014 Twitter</span>
+          <a>About</a>
+          <a>Help</a>
+          <a>Terms</a>
+          <a>Privacy</a>
+
+          <br />
+
+          <a>Cookies</a>
+          <a>Ads info</a>
+          <a>Brand</a>
+          <a>Blog</a>
+          <a>Status</a>
+
+          <br />
+
+          <a>Apps</a>
+          <a>Jobs</a>
+          <a>Advertise</a>
+          <a>Media</a>
+          <a>Developers</a>
+        </div>
+      </section>
+
+
+
+      <section class='tweets box'>
+        <div class='tweets-title'>
+          <div class='big-title'>Tweets</div>
+        </div>
+
+
+        <div class='feed'>
+
+
+
+        </div>
+      </section>
+    </main>
+  </script>
+
+
+  <script type='text/x-handlebars' data-template-name='twitter'>
+    <header>
+
+      <ul class='header-left'>
+        <li class='h-l-link'>
+          <span class='icon home'></span>
+
+          <span class='link-name'>Home</span>
+        </li>
+
+        <li class='h-l-link'>
+          <span class='icon connect'></span>
+
+          <span class='link-name'>Connect</span>
+        </li>
+
+        <li class='h-l-link'>
+          <span class='icon discover'></span>
+
+          <span class='link-name'>Discover</span>
+        </li>
+
+        <li class='h-l-link'>
+          <span class='icon me'></span>
+
+          <span class='link-name'>Me</span>
+        </li>
+      </ul>
+
+
+      <ul class='header-right'>
+        <li class='h-r-link'>
+          <span class='icon compose'></span>
+        </li>
+
+        <li class='h-r-link'>
+          <span class='icon settings'></span>
+        </li>
+
+        <li class='h-r-link'>
+          <span class='icon mail'></span>
+        </li>
+
+        <li class='searchbar'>
+          <input type='text' placeholder='Search' />
+
+          <span class='icon search'></span>
+        </li>
+      </ul>
+
+
+      <div class='header-center'>
+        <span class='icon bird-white'></span>
       </div>
 
+    </header>
 
-      <div class='links box'>
-        <span>&#169; 2014 Twitter</span>
-        <a>About</a>
-        <a>Help</a>
-        <a>Terms</a>
-        <a>Privacy</a>
+    {{outlet}}
+  </script>
 
-        <br />
+  <script src="js/libs/jquery-1.10.2.min.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  <script src='js/application.js'></script>
+  <script src='js/router.js'></script>
 
-        <a>Cookies</a>
-        <a>Ads info</a>
-        <a>Brand</a>
-        <a>Blog</a>
-        <a>Status</a>
-
-        <br />
-
-        <a>Apps</a>
-        <a>Jobs</a>
-        <a>Advertise</a>
-        <a>Media</a>
-        <a>Developers</a>
-      </div>
-    </section>
-
-
-
-    <section class='tweets box'>
-      <div class='tweets-title'>
-        <div class='big-title'>Tweets</div>
-      </div>
-
-
-      <div class='feed'>
-
-
-
-      </div>
-    </section>
-  </main>
 </body>
 </html>
