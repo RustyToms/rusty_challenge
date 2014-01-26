@@ -481,17 +481,17 @@ header {
 .convo-line-dot {
   @extend .convo-line;
   height: 3px;
-  top: 4px;
+  top: 7px;
 }
 .convo-line-dot:first-child {
-  top: 0px;
+  top: 3px;
 }
 .convo-line-dot:last-child {
-  top: 8px;
+  top: 11px;
 }
 .convo-line-end {
   @extend .convo-line;
-  top: 13px;
+  top: 16px;
   bottom: 2px;
 }
 .reply-count {
