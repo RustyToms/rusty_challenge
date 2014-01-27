@@ -8,7 +8,8 @@ gem 'rails', '3.2.16'
 
 gem 'pg'
 gem 'sass-rails',   '~> 3.2.3'
-gem "figaro"
+gem 'figaro'
+gem 'twitter'
 
 
 # Gems used only for assets and not required

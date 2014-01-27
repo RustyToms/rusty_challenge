@@ -1,26 +1,22 @@
 Twitter.TwitterController = Ember.ObjectController.extend({
   actions: {
     findUser: function(){
-
+      console.log('in #findUser ' + this.get('screen_name'));
       // this.set('isLoading', true);
-      // var result = Ember.$.getJSON(
-      //   'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=' +
-      //   this.get('screen_name') + '&count=15');
+      console.log(this);
+      var result = Ember.$.getJSON(
+        '/oauth/new?screen_name=' + this.get('screen_name'));
 
-      // result.then(this.fulfill, reject);
+      result.then(fulfill, reject);
 
-      // function fulfill(answer) {
-      //   this.set('screen_name', '');
-      //   this.set('isLoading', false);
-      //   console.log(answer);
-      // }
+      function fulfill(answer) {
+        console.log('success');
+        console.log(answer);
+      }
 
-      // function reject(reason) {
-      //   this.set('failed_name', this.get('screen_name'));
-      //   this.set('screen_name', '');
-      //   this.set('isLoading', false);
-      //   this.set('notFound', true);
-      // }
+      function reject(reason) {
+        console.log("failure");
+      }
     }
   },
 
