@@ -13,6 +13,10 @@ $dark-grey: rgb(104, 117, 127); //count, big-title
 $light-grey: rgba(153, 153, 153, 0.75); //links, retweeter
 $dark-blue: rgb(77, 133, 192); // trends-list, target-name, additional-replies
 // $dark-blue: rgb(128, 167, 210);
+$icons-url: "http://jonathan.toms.twitter.challenge.s3-website-us-east-1.amazonaws.com/img/twitter_icons_small.png";
+$kitteh-url: "http://jonathan.toms.twitter.challenge.s3-website-us-east-1.amazonaws.com/img/kitteh.png";
+$not-kitteh-url: "http://jonathan.toms.twitter.challenge.s3-website-us-east-1.amazonaws.com/img/not-kitteh.png";
+$twitter-image-url: "http://jonathan.toms.twitter.challenge.s3-website-us-east-1.amazonaws.com/img/twitter_small.png";
 
 body {
   font-family: $font;
@@ -66,7 +70,7 @@ h1 {
 /* ---------- Icons ---------- */
 
 .icon {
-  background-image: url("../img/twitter_icons_small.png");
+  background-image: url($icons-url);
   display: inline-block;
   width: 22px;
   height: 22px;
@@ -537,7 +541,7 @@ header {
   display: none;
   position: absolute;
   z-index: 3;
-  background-image: url("../img/twitter_small.png");
+  background-image: url($twitter-image-url);
   width: 100%;
   height: 100%;
   top: 0px;
