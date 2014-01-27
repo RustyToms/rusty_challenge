@@ -10,4 +10,13 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require lib/jquery-1.10.2.min.js
+//= require lib/handlebars-1.0.0.js
+//= require lib/ember.js
+//= require lib/ember-data.js
+//= require twitter.js
+//= require router.js
+//= require controllers/twitter_controller.js
 //= require_tree .
+
+

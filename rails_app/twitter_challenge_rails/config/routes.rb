@@ -1,6 +1,8 @@
 TwitterChallenge::Application.routes.draw do
   get "home/index"
 
+  get "/static_example", to: 'home#static_example'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
