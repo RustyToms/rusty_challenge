@@ -13,7 +13,16 @@
 
 <body>
   <script type='text/x-handlebars' data-template-name='twitter/index'>
-    <h1 id='invitation'>Please search for a username</h1>
+    {{#if twitter.notFound}}
+      <h1>{{twitter.failed_name}} was not found, please try again</h1>
+    {{else}}
+      {{#if twitter.isLoading}}
+        <h1>Searching for {{twitter.screen_name}}...</h1>
+      {{else}}
+        <h1>Please search for a screen name</h1>
+      {{/if}}
+    {{/if}}
+
   </script>
 
   <script type='text/x-handlebars' data-template-name='account'>
@@ -159,7 +168,8 @@
         </li>
 
         <li class='searchbar'>
-          <input type='text' placeholder='Search' />
+          {{input type='text' placeholder='Search' value=screen_name
+            action="findUser"}}
 
           <span class='icon search'></span>
         </li>

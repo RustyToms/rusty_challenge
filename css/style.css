@@ -60,13 +60,13 @@ a {
 img {
   vertical-align: top; }
 
-/* ---------- General ---------- */
-#invitation {
+h1 {
   width: 900px;
   margin: 40px auto;
   font-size: 36px;
   text-align: center; }
 
+/* ---------- General ---------- */
 .clearfix:after {
   content: "";
   clear: both;
