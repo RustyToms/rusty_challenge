@@ -1,6 +1,6 @@
 Twitter.Router.map(function() {
   this.resource('twitter', {path: '/'}, function(){
-    this.resource('account', {path: '/:screen_name'});
+    this.resource('user', {path: '/user/:screen_name'});
   });
 });
 
@@ -10,14 +10,14 @@ Twitter.IndexRoute = Ember.Route.extend({
   }
 });
 
-Twitter.AccountRoute = Ember.Route.extend({
+Twitter.UserRoute = Ember.Route.extend({
   model: function(params) {
-    // use twitter API to retrieve info from username provided as params
-    return Ember.$.getJSON('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=params$count=15');
+    console.log(params);
+    that.store.find('user', {screen_name: params});
   },
 
-  serialize: function(account) {
-    return {screen_name: account.get('screen_name')};
+  serialize: function(user) {
+    return {screen_name: user.get('screen_name')};
   }
 });
 

@@ -16,7 +16,8 @@
 //= require lib/ember-data.js
 //= require twitter.js
 //= require router.js
-//= require controllers/twitter_controller.js
+//= require_tree ./controllers
+//= require_tree ./models
 //= require_tree .
 
 
