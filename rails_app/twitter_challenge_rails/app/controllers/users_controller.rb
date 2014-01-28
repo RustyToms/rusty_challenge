@@ -1,4 +1,4 @@
-class OauthsController < ApplicationController
+class UsersController < ApplicationController
 
   def new
 
@@ -9,8 +9,11 @@ class OauthsController < ApplicationController
       config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
     end
 
-    user = client.user(params["screen_name"])
+    info = {
+      "user" => client.user(params["screen_name"]),
+      "trends" => client.trends
+    }
 
-    render json: user
+    render json: info
   end
 end

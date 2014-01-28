@@ -17,28 +17,28 @@
   <main>
     <section class='sidebar'>
       <div class='account'>
-        <img src='img/not-kitteh.png' class='background-pic' />
+        <img {{bind-attr src=backgroundPic}} class='background-pic' />
 
-        <img src='img/kitteh.png' class='profile-pic' />
+        <img {{bind-attr src=profilePic}} class='profile-pic' />
 
         <table class='counts'>
           <tr>
             <td class='tweet-count'>
               <h4>TWEETS</h4>
 
-              <span class='count'>{{statuses_count}}</span>
+              <span class='count'>{{user.statuses_count}}</span>
             </td>
 
             <td class='following-count'>
               <h4>FOLLOWING</h4>
 
-              <span class='count'>{{friends_count}}</span>
+              <span class='count'>{{user.friends_count}}</span>
             </td>
 
             <td class='followers-count'>
               <h4>FOLLOWERS</h4>
 
-              <span class='count'>{{followers_count}}</span>
+              <span class='count'>{{user.followers_count}}</span>
             </td>
           </tr>
         </table>
@@ -63,7 +63,16 @@
         </div>
 
         <ul class='trends-list'>
+          {{#each trends}}
+            <li>
+              <a>{{name}}</a>
+              {{#if promoted_content}}
+                <span class='icon promoted'></span>
 
+                <a>Promoted</a>
+              {{/if}}
+            </li>
+          {{/each}}
         </ul>
       </div>
 

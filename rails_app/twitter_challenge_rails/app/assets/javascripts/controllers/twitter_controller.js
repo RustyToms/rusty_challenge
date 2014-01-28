@@ -7,7 +7,7 @@ Twitter.TwitterController = Ember.ObjectController.extend({
       console.log('in #findUser ' + name);
       this.set('isLoading', true);
 
-      var result = Ember.$.getJSON('/oauth/new?screen_name=' + name);
+      var result = Ember.$.getJSON('/users/new?screen_name=' + name);
 
       result.then(fulfill, reject);
 
