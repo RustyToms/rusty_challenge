@@ -17,6 +17,12 @@
 
 </script>
 
+<script type='text/x-handlebars' data-template-name='tweet'>
+
+  {{{parseTweet}}}
+
+</script>
+
 <script type='text/x-handlebars' data-template-name='user'>
 
   <main>
@@ -31,19 +37,19 @@
             <td class='tweet-count'>
               <h4>TWEETS</h4>
 
-              <span class='count'>{{user.statuses_count}}</span>
+              <span class='count'>{{numTweets}}</span>
             </td>
 
             <td class='following-count'>
               <h4>FOLLOWING</h4>
 
-              <span class='count'>{{user.friends_count}}</span>
+              <span class='count'>{{numFollowing}}</span>
             </td>
 
             <td class='followers-count'>
               <h4>FOLLOWERS</h4>
 
-              <span class='count'>{{user.followers_count}}</span>
+              <span class='count'>{{numFollowers}}</span>
             </td>
           </tr>
         </table>
@@ -145,7 +151,7 @@
                 </div>
 
                 <div class='tweet-content'>
-                  {{text}}
+                  {{render "tweet" text}}
                 </div>
 
                 <div class='tweet-nav-bar'>
