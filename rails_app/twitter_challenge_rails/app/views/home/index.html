@@ -152,6 +152,10 @@
 
                 <div class='tweet-content'>
                   {{render "tweet" text}}
+
+                  {{#each entities.media}}
+                    <img src="{{unbound media_url}}" />
+                  {{/each}}
                 </div>
 
                 <div class='tweet-nav-bar'>
