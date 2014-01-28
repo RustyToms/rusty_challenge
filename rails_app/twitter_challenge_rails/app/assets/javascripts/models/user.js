@@ -1,1 +1,2 @@
-Twitter.User = DS.Model.extend();
+Twitter.User = DS.Model.extend({
+});

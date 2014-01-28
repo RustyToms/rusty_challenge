@@ -1,23 +1,35 @@
 Twitter.Router.map(function() {
   this.resource('twitter', {path: '/'}, function(){
-    this.resource('user', {path: '/user/:screen_name'});
+    this.route('fail');
+    this.route('loading');
+    this.resource('user', {path: ':screen_name'});
   });
-});
-
-Twitter.IndexRoute = Ember.Route.extend({
-  setupController: function(controller, model) {
-    this.controllerFor('twitter');
-  }
 });
 
 Twitter.UserRoute = Ember.Route.extend({
   model: function(params) {
-    console.log(params);
-    that.store.find('user', {screen_name: params});
+    var that = this;
+    var promise = Ember.$.getJSON('/users/new?screen_name=' +
+      params['screen_name']);
+
+    promise.then(fulfill, reject);
+
+    function fulfill (answer) {
+      var user = that.store.createRecord('user', answer);
+myUser = user;
+
+      return user;
+    }
+
+    function reject (reason) {
+      that.transitionTo('twitter.fail');
+    }
+
+    return promise;
   },
 
   serialize: function(user) {
-    return {screen_name: user.get('screen_name')};
+    return {screen_name: user.get('user.screen_name')};
   }
 });
 

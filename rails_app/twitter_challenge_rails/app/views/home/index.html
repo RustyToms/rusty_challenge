@@ -1,14 +1,19 @@
 
 <script type='text/x-handlebars' data-template-name='twitter/index'>
-  {{#if twitter.notFound}}
-    <h1>{{twitter.failed_name}} was not found, please try again</h1>
-  {{else}}
-    {{#if twitter.isLoading}}
-      <h1>Searching for {{twitter.screen_name}}...</h1>
-    {{else}}
-      <h1>Please search for a screen name</h1>
-    {{/if}}
-  {{/if}}
+
+    <h1>Please search for a screen name</h1>
+
+</script>
+
+<script type='text/x-handlebars' data-template-name='twitter/loading'>
+
+  <h1>Searching for {{controllers.twitter.searchingFor}}...</h1>
+
+</script>
+
+<script type='text/x-handlebars' data-template-name='twitter/fail'>
+
+  <h1>{{controllers.twitter.searchingFor}} was not found, please try again</h1>
 
 </script>
 
@@ -111,9 +116,49 @@
 
 
       <div class='feed'>
+        {{#each retweets}}
+          <article class='conversation'>
 
+            <div class='tweet'>
+              <section class='rt-notification'>
+                <span class='icon retweet-green'></span>
 
+                <p>Retweeted by {{user.name}}</p>
+              </section>
 
+              <section class='visuals'>
+
+        {{#with retweeted_status}}
+                <img src="{{unbound user.profile_image_url}}" class='thumbnail' />
+
+                <div class='convo-line-solid'></div>
+              </section>
+
+              <section class='content'>
+                <div class='tweet-header'>
+                  <span class='author'>{{user.name}}</span>
+
+                  <span class='username'>@{{user.screen_name}}</span>
+        {{/with}}
+
+                  <span class='how-long-ago'></span>
+                </div>
+
+                <div class='tweet-content'>
+                  {{text}}
+                </div>
+
+                <div class='tweet-nav-bar'>
+                  <span class='icon reply'></span>
+                  <span class='icon retweet'></span>
+                  <span class='icon favorite'></span>
+                  <span class='icon more'></span>
+                </div>
+              </section>
+            </div>
+
+          </article>
+        {{/each}}
       </div>
     </section>
   </main>
