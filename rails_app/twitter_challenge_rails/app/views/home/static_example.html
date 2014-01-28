@@ -1,5 +1,5 @@
 
-<header>
+<header class='static'>
 
   <ul class='header-left'>
     <li class='h-l-link'>
@@ -56,7 +56,7 @@
 </header>
 
 
-
+<div class='static'>
 <main>
   <section class='sidebar'>
     <div class='account'>
@@ -440,61 +440,30 @@
           </section>
         </div>
       </article>
-
-<!-- Tweet Feed templates
-
-      <article class='conversation'>
-
-        <div class='tweet'>
-          <section class='rt-notification'>
-            <span class='icon retweet-green'></span>
-
-            <p></p>
-          </section>
-
-          <section class='visuals'>
-            <img src='http://jonathan.toms.twitter.challenge.s3-website-us-east-1.amazonaws.com/img/not-kitteh.png' class='thumbnail' />
-
-            <div class='convo-line-solid'></div>
-          </section>
-
-          <section class='content'>
-            <div class='tweet-header'>
-              <span class='author'></span>
-
-              <span class='username'></span>
-
-              <span class='how-long-ago'></span>
-            </div>
-
-            <div class='tweet-content'>
-            </div>
-
-            <div class='tweet-nav-bar'>
-              <span class='icon reply'></span>
-              <span class='icon retweet'></span>
-              <span class='icon favorite'></span>
-              <span class='icon more'></span>
-            </div>
-          </section>
-        </div>
-
-        <section class='hidden-replies'>
-          <ul>
-            <li class='convo-line-dot'></li>
-            <li class='convo-line-dot'></li>
-            <li class='convo-line-dot'></li>
-          </ul>
-
-          <div class='convo-line-end'></div>
-
-          <a class='reply-count'></a>
-        </section>
-
-      </article>
--->
     </div>
   </section>
 </main>
+</div>
 
 <div class='overlay'></div>
+
+<div class='overlay-controls'>
+  <button id='toggle' onClick='toggleOverlay();'>Toggle Overlay</button>
+
+  <button id='half' onClick='halfOverlay();'>Overlay at 50% opacity</button>
+</div>
+
+<script>
+  toggleOverlay = function() {
+    var $overlay = $('.overlay');
+    if ($overlay.css('display') === 'none') {
+      $overlay.css('opacity', 1).show();
+    } else {
+      $overlay.hide();
+    }
+  };
+
+  halfOverlay = function() {
+    $('.overlay').css('opacity', 0.5).show();
+  };
+</script>

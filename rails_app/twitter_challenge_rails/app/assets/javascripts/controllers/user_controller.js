@@ -9,6 +9,7 @@ Twitter.UserController = Ember.ObjectController.extend({
       old_tweets.unshiftObjects(tweet);
       this.set('new_tweet', '');
       this.set('model.tweets', old_tweets);
+      // trigger update of the timeline
       this.get('model.tweets').arrayContentDidChange(0,0,1);
     }
   },
@@ -52,7 +53,6 @@ Twitter.UserController = Ember.ObjectController.extend({
 
 Twitter.TweetController = Ember.ObjectController.extend({
   parseTweet: function() {
-    console.log("in parseTweet");
     var text = this.get("model");
     var regex = new RegExp("[@#]\\w*", 'g');
 

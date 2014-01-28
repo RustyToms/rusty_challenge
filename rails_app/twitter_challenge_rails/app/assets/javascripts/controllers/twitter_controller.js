@@ -2,6 +2,7 @@ Twitter.TwitterController = Ember.ObjectController.extend({
   actions: {
     findUser: function(){
       var name = this.get('screen_name');
+      name = name.replace('@', '');
       this.set('searchingFor', name);
       this.set('screen_name', '');
 
