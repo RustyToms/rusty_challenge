@@ -1,4 +1,23 @@
 Twitter.UserController = Ember.ObjectController.extend({
+  actions: {
+    postTweet: function() {
+      var tweet = {};
+      var old_tweets = this.get('model.tweets');
+      tweet.text = this.get('new_tweet');
+      tweet.profile_pic = this.get('profilePic');
+      old_tweets.unshiftObjects(tweet);
+      this.set('new_tweet', '');
+      this.set('model.tweets', old_tweets);
+      this.get('model.tweets').arrayContentDidChange(0,0,1);
+    }
+  },
+
+  new_tweet: '',
+
+  getTweets: function() {
+    return this.get('tweets');
+  }.property('@each.model.tweets'),
+
   backgroundPic: function() {
     return this.get('model.user.profile_banner_url');
   }.property('model.user.profile_banner_url'),

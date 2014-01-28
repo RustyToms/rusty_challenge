@@ -55,11 +55,13 @@
         </table>
 
         <div class='box-bottom'>
-          <input
-            type='text'
+          {{input
             class='compose-tweet'
             placeholder='Compose new Tweet...'
-          />
+            value=new_tweet
+            action="postTweet"
+          }}
+
         </div>
       </div>
 
@@ -122,6 +124,42 @@
 
 
       <div class='feed'>
+        {{#each getTweets}}
+          <article class='conversation'>
+
+            <div class='tweet'>
+              <section class='visuals'>
+
+                <img src='{{unbound profile_pic}}' class='thumbnail' />
+
+                <div class='convo-line-solid'></div>
+              </section>
+
+              <section class='content'>
+                <div class='tweet-header'>
+                  <span class='author'>{{../user.name}}</span>
+
+                  <span class='username'>@{{../user.screen_name}}</span>
+
+                  <span class='how-long-ago'>just now</span>
+                </div>
+
+                <div class='tweet-content'>
+                  {{render "tweet" text}}
+                </div>
+
+                <div class='tweet-nav-bar'>
+                  <span class='icon reply'></span>
+                  <span class='icon retweet'></span>
+                  <span class='icon favorite'></span>
+                  <span class='icon more'></span>
+                </div>
+              </section>
+            </div>
+
+          </article>
+        {{/each}}
+
         {{#each retweets}}
           <article class='conversation'>
 

@@ -15,6 +15,7 @@ Twitter.UserRoute = Ember.Route.extend({
     promise.then(fulfill, reject);
 
     function fulfill (answer) {
+      answer.tweets = [];
       var user = that.store.createRecord('user', answer);
 myUser = user;
 
