@@ -14,6 +14,7 @@
 //= require lib/handlebars-1.0.0.js
 //= require lib/ember.js
 //= require lib/ember-data.js
+//= require lib/moment.min.js
 //= require twitter.js
 //= require router.js
 //= require_tree ./controllers

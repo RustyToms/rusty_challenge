@@ -23,6 +23,12 @@
 
 </script>
 
+<script type='text/x-handlebars' data-template-name='time'>
+
+  <span class='how-long-ago'>{{{howOld}}}</span>
+
+</script>
+
 <script type='text/x-handlebars' data-template-name='user'>
 
   <main>
@@ -141,7 +147,7 @@
 
                   <span class='username'>@{{../user.screen_name}}</span>
 
-                  <span class='how-long-ago'>just now</span>
+                  {{render 'time' created_at}}
                 </div>
 
                 <div class='tweet-content'>
@@ -184,8 +190,7 @@
 
                   <span class='username'>@{{user.screen_name}}</span>
         {{/with}}
-
-                  <span class='how-long-ago'></span>
+                  {{render 'time' created_at}}
                 </div>
 
                 <div class='tweet-content'>

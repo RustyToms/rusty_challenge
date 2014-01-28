@@ -5,6 +5,7 @@ Twitter.UserController = Ember.ObjectController.extend({
       var old_tweets = this.get('model.tweets');
       tweet.text = this.get('new_tweet');
       tweet.profile_pic = this.get('profilePic');
+      tweet.created_at = moment().format();
       old_tweets.unshiftObjects(tweet);
       this.set('new_tweet', '');
       this.set('model.tweets', old_tweets);
@@ -67,6 +68,12 @@ Twitter.TweetController = Ember.ObjectController.extend({
     regex = new RegExp("(http)s*://\\S*", "gi");
     text = text.replace(regex, "<a>$&</a>");
     return text;
+  }.property("model")
+});
+
+Twitter.TimeController = Ember.ObjectController.extend({
+  howOld: function() {
+    return moment(this.get("model")).fromNow();
   }.property("model")
 });
 
