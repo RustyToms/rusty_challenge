@@ -1,4 +1,5 @@
 Twitter.UserController = Ember.ObjectController.extend({
+
   actions: {
     postTweet: function() {
       var tweet = {};

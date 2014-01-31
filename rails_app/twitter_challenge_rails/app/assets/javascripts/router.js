@@ -2,8 +2,12 @@ Twitter.Router.map(function() {
   this.resource('twitter', {path: '/'}, function(){
     this.route('fail');
     this.route('loading');
-    this.resource('user', {path: ':screen_name'});
+    this.resource('user', {path: '/account/:screen_name'});
   });
+});
+
+Twitter.Router.reopen({
+  location: 'history'
 });
 
 Twitter.UserRoute = Ember.Route.extend({
@@ -17,7 +21,6 @@ Twitter.UserRoute = Ember.Route.extend({
     function fulfill (answer) {
       answer.tweets = [];
       var user = that.store.createRecord('user', answer);
-
       return user;
     }
 

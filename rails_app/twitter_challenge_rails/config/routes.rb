@@ -2,6 +2,7 @@ TwitterChallenge::Application.routes.draw do
   get "home/index"
 
   get "/static_example", to: 'home#static_example'
+  get "/account/*anyname", to: 'home#index'
 
   resources :users, only: [:new]
 
