@@ -267,8 +267,14 @@ header {
 .account {
   position: relative;
 }
-.background-pic {
+.profile-images {
   border: $border;
+  width: $sidebar-width - 2px;
+  height: 144px;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+}
+.background-pic {
   width: $sidebar-width - 2px;
   height: 144px;
   border-top-left-radius: $radius;

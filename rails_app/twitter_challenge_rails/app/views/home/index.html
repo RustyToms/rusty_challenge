@@ -36,9 +36,11 @@
   <main>
     <section class='sidebar'>
       <div class='account'>
-        <img {{bind-attr src=backgroundPic}} class='background-pic' />
+        <div class='profile-images'>
+          <img {{bind-attr src=backgroundPic}} class='background-pic' />
 
-        <img {{bind-attr src=profilePic}} class='profile-pic' />
+          <img {{bind-attr src=profilePic}} class='profile-pic' />
+        </div>
 
         <table class='counts'>
           <tr>
