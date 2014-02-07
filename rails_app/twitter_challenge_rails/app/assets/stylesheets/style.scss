@@ -414,6 +414,15 @@ header {
   padding: 13px 13px 12px 12px;
   border-bottom: $border;
 }
+.link-disclaimer {
+  font-size: 19px;
+  font-weight: 200;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  float: right;
+  color: red;
+  text-align: right;
+}
 .conversation {
   padding: 12px;
   border-bottom: $border;
